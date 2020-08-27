@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 /* eslint unicorn/no-process-exit: 0 */
+const dotenv = require('dotenv');
+const dotenvParseVariables = require('dotenv-parse-variables');
+
+let env = dotenv.config({})
+if (env.error) throw env.error;
+env = dotenvParseVariables(env.parsed);
+process.env = env;
 
 const config = require('./application/config')
 
@@ -72,3 +79,5 @@ server.on('error', error => {
 			process.exit(1)
 	}
 })
+
+console.log("Started on " +config.http.port )
