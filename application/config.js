@@ -12,10 +12,12 @@ const config = {
 		port: process.env.IMAP_PORT || 143,
 		tls: process.env.IMAP_TLS || false,
 		authTimeout: 3000,
-		refreshIntervalSeconds: process.env.IMAP_REFRESH_INTERVAL_SECONDS
+		refreshIntervalSeconds: process.env.IMAP_REFRESH_INTERVAL_SECONDS || 1
 	},
 	http: {port: normalizePort(process.env.PORT || '3000')}
 }
+
+console.log(config);
 
 if (!config.imap.user || !config.imap.password || !config.imap.host) {
 	throw new Error('IMAP is not configured. Use IMAP_* ENV vars.')
