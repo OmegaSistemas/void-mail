@@ -7,7 +7,7 @@
         });
     </script>
 
-    <div style="float: right"><a href="/login"> logout</a></div>
+    <div style="float: right"><a href="/login"> Sair</a></div>
     <h1>{{ address }}</h1>
     {% for mail in mailSummaries %}
         <a href="{{ mail.to[0] }}/{{ mail.uid }}" class="no-link-color">
@@ -27,7 +27,7 @@
 
     {% if not mailSummaries %}
         <blockquote>
-            There are no mails yet.
+            Sem mensagens ainda.
         </blockquote>
     {% endif %}
 

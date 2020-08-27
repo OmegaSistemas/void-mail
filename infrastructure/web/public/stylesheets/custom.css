@@ -7,6 +7,7 @@ body {
 main {
     flex: 1; /* keep footer at the bottom */
 }
+
 a {
     /*color: #00B7FF;*/
 }
@@ -20,6 +21,14 @@ a.no-link-color {
     background-color: #eeeeee;
 }
 
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    background: #F44336;
+    border-color: #ca3024; 
+}
 
 iframe {
     width: 100%;
@@ -29,7 +38,7 @@ iframe {
 }
 
 blockquote {
-    border-left: .3rem solid #9b4dca;
+    border-left: .3rem solid #F44336;
 }
 
 blockquote.warning {
