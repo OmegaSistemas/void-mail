@@ -47,9 +47,9 @@ DOMAIN | String | The domain part after the @, where your receive emails. (e.g. 
 IMAP_SERVER | String | The imap server address. (e.g. `imap.example.com`)
 IMAP_USER | String | The username used to sign into the imap server. 
 IMAP_PASSWORD | String | The password used to sign into the imap server.
-IMAP_REFRESH_INTERVAL_SECONDS | Integer | How often to check for new messages on the imap server. (default: `undefined`) Usually the application reacts immediately to new arrived mail.
 IMAP_PORT | Integer | Default 143
 IMAP_TLS | Boolean | Default false
+IMAP_REFRESH_INTERVAL_SECONDS | Integer | How often to check for new messages on the imap server. (default: `undefined`) Usually the application reacts immediately to new arrived mail.
 PORT | Integer | On which port to run the http interface. (default: `3000`)
 DELETE_MAILS_OLDER_THAN_DAYS | Integer | How many days to to wait before deleting messages. (default: `30`)
 DEBUG | String | Enable debug logging with value `void-mail:*` (default: disabled)
