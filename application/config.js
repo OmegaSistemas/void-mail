@@ -9,8 +9,8 @@ const config = {
 		user: process.env.IMAP_USER,
 		password: process.env.IMAP_PASSWORD,
 		host: process.env.IMAP_SERVER,
-		port: 993,
-		tls: true,
+		port: process.env.IMAP_PORT || 143,
+		tls: process.env.IMAP_TLS || false,
 		authTimeout: 3000,
 		refreshIntervalSeconds: process.env.IMAP_REFRESH_INTERVAL_SECONDS
 	},
